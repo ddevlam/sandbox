@@ -1,12 +1,12 @@
 package nl.seiferd.vertx.hello;
 
-import io.vertx.core.Vertx;
+import io.vertx.core.AbstractVerticle;
 import io.vertx.ext.web.Router;
 
-public class HelloWorldApplication {
+public class HelloWorldApplication extends AbstractVerticle {
 
-    public static void main(String[] args) {
-        Vertx vertx = Vertx.vertx();
+    @Override
+    public void start() {
         Router router = Router.router(vertx);
 
         router.route("/:id").handler(ctx -> new HelloController().handle(ctx));
