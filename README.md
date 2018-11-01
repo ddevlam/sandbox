@@ -1,2 +1,2 @@
 # sandbox
-Simple sandbox repo for snippits 
+Simple sandbox repo for snippits
